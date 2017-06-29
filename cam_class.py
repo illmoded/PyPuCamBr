@@ -4,12 +4,9 @@ import urllib.request
 import urllib.error
 import urllib.parse
 import requests
-import numpy as np
-from io import StringIO
 from timeout import *
 import cv2
 
-frame_buffer = StringIO()
 
 cas_profile = cv2.CascadeClassifier(
     '/usr/share/opencv/haarcascades/haarcascade_profileface.xml')
@@ -131,7 +128,7 @@ if __name__ == "__main__":
     obraz = kamera.GrabFrame()
 
     file = "test.png"
-    cv2.imwrite(file,obraz)
+    cv2.imwrite(file, obraz)
 
     print(kamera)
     del(kamera)
